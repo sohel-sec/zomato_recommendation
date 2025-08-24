@@ -1,5 +1,72 @@
 # Zomato Restaurant Recommendation System
 
+
+This project develops a restaurant recommendation system using the Zomato Bengaluru dataset. The goal is to provide personalized restaurant suggestions to users based on various factors, including restaurant attributes, user preferences, and potentially collaborative filtering techniques.
+
+## Project Overview
+
+The project involves the following key stages:
+
+1.  **Data Loading and Exploration**: Loading the Zomato dataset and performing initial exploration to understand its structure, content, and identify missing values.
+2.  **Exploratory Data Analysis (EDA)**: Visualizing key patterns and insights from the dataset, such as:
+    *   Top restaurant chains and their distribution.
+    *   Popular cuisines in Bengaluru.
+    *   Distribution of online ordering and table booking availability.
+    *   Distribution of restaurant ratings.
+    *   Most common restaurant types.
+    *   Distribution of approximate cost for two people.
+    *   Location-based patterns of restaurants.
+    *   Relationships between numerical variables like votes, ratings, and cost.
+3.  **Feature Engineering for Recommendation**: Preparing the data for building a recommendation system by:
+    *   Selecting relevant columns for recommendation.
+    *   Handling missing values in the selected columns.
+    *   Converting data types for numerical features.
+    *   Cleaning and standardizing text data.
+    *   Extracting features like the number of cuisines.
+    *   Applying TF-IDF vectorization to text features ('cuisines' and 'dish\_liked').
+    *   Scaling numerical features and encoding categorical features.
+    *   Creating a combined feature matrix for similarity calculations.
+4.  **Similarity Calculation**: Calculating similarity scores between restaurants using cosine similarity based on the engineered features. This similarity matrix is a core component for a content-based or hybrid recommendation system.
+5.  **Analyzing Reviews**: Extracting and analyzing restaurant reviews and ratings to understand the distribution of ratings from customer feedback.
+6.  **Wordcloud of Dishes Liked**: Generating wordclouds to visualize the most liked dishes for different cuisines, providing insights into popular food items.
+
+## Dataset
+
+The dataset used in this project is `zomato.csv`, containing information about restaurants in Bengaluru, India.
+
+## Key Findings from EDA
+
+*   "San Churro Cafe" and "New Prashanth Hotel" are among the top restaurant chains based on the number of outlets.
+*   North Indian, Chinese, and South Indian are the most popular cuisines.
+*   A majority of restaurants offer online ordering, while a smaller proportion provide table booking.
+*   Restaurant ratings are generally high, with a peak around 3.8 to 4.0.
+*   "Quick Bites" and "Casual Dining" are the most common restaurant types.
+*   Most restaurants have an approximate cost for two people in the lower to mid-ranges.
+*   Restaurants are clustered in certain areas of Bengaluru (e.g., Banashankari, Basavanagudi).
+*   There is a positive correlation between votes and ratings, and a weak positive correlation between cost and ratings.
+
+## Feature Engineering Details
+
+The following features were engineered for the recommendation system:
+
+*   **Numerical Features**: Scaled 'rate', 'votes', 'approx\_cost(for two people)', and 'num\_cuisines'.
+*   **Categorical Features**: One-Hot Encoded 'location' and 'rest\_type'.
+*   **Text Features**: TF-IDF vectors for 'cuisines' and 'dish\_liked'.
+
+These features were combined into a single sparse matrix, and cosine similarity was calculated to quantify the similarity between restaurants.
+
+## Usage
+
+The generated cosine similarity matrix can be used to recommend restaurants that are similar to a restaurant a user likes or has previously visited. Further development would involve building a recommendation function that takes a restaurant as input and returns a list of similar restaurants based on the calculated similarity scores.
+
+## Future Enhancements
+
+*   Implement a recommendation function based on the cosine similarity matrix.
+*   Explore other similarity metrics or recommendation algorithms (e.g., collaborative filtering).
+*   Incorporate natural language processing (NLP) techniques for more advanced analysis of reviews and dish descriptions.
+*   Build a user interface to interact with the recommendation system.
+*   Evaluate the performance of the recommendation system using appropriate metrics.
+
 ## Description
 Build a multi-input LSTM model that takes padded text sequences and other features to predict restaurant ratings and recommend similar restaurants.
 
