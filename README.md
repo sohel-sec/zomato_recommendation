@@ -1,7 +1,7 @@
 # Zomato Restaurant Recommendation System
 
 
-This project develops a restaurant recommendation system using the Zomato Bengaluru dataset. The goal is to provide personalized restaurant suggestions to users based on various factors, including restaurant attributes, user preferences, and potentially collaborative filtering techniques.
+This project develops a restaurant recommendation system using the Zomato Bengaluru dataset. The goal is to provide personalized restaurant suggestions to users based on various factors, including restaurant attributes, user preferences, and potentially a combination of content-based and collaborative filtering techniques.
 
 ## Project Overview
 
