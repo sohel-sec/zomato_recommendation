@@ -3,6 +3,9 @@
 
 This project develops a restaurant recommendation system using the Zomato Bengaluru dataset. The goal is to provide personalized restaurant suggestions to users based on various factors, including restaurant attributes, user preferences, and potentially a combination of content-based and collaborative filtering techniques.
 
+## Dataset
+The dataset used in this project is `zomato.csv`, containing information about restaurants in Bengaluru, India.
+
 ## Project Overview
 
 The project involves the following key stages:
@@ -30,9 +33,6 @@ The project involves the following key stages:
 5.  **Analyzing Reviews**: Extracting and analyzing restaurant reviews and ratings to understand the distribution of ratings from customer feedback.
 6.  **Wordcloud of Dishes Liked**: Generating wordclouds to visualize the most liked dishes for different cuisines, providing insights into popular food items.
 
-## Dataset
-
-The dataset used in this project is `zomato.csv`, containing information about restaurants in Bengaluru, India.
 
 ## Key Findings from EDA
 
